@@ -1,6 +1,6 @@
 <div id="app">
   <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">bezKoder</a>
+    <a href="#" class="navbar-brand">Ejemplo</a>
     <ul class="navbar-nav mr-auto" routerLinkActive="active">
       <li class="nav-item">
       </li>
@@ -9,9 +9,6 @@
       </li>
       <li class="nav-item">
         <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
-      </li>
-      <li class="nav-item">
-        <a href="/productos" class="nav-link" routeLink="productos">Producos</a>
       </li>
     </ul>
 
@@ -35,7 +32,6 @@
   </nav>
 
   <div class="container">
-    <mat-slider min="1" max="100" step="1" value="1"></mat-slider>
     <router-outlet></router-outlet>
   </div>
 </div>

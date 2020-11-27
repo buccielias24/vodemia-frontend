@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../_services/product.service';
 import { UserService } from '../_services/user.service';
 
 @Component({
@@ -10,14 +9,9 @@ import { UserService } from '../_services/user.service';
 export class BoardAdminComponent implements OnInit {
   content='';
 
-  constructor(private userService: UserService, private productService :ProductService) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe(
-      data =>{
-        console.log(data);
-      }
-    );
     this.userService.getAdminBoard().subscribe(
       data => {
         this.content=data;
